@@ -35,7 +35,7 @@ if uploaded_file is not None:
     st.subheader("Data Cleaning")
     data[['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']] = data[
         ['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']
-    ].replace(0, np.NaN)
+    ].replace(0, np.nan)
 
     st.write("Missing values (before cleaning):")
     st.write(data.isnull().sum())
