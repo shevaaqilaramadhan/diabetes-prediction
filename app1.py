@@ -29,7 +29,7 @@ uploaded_file = st.file_uploader("Upload your diabetes dataset (CSV format)", ty
 if uploaded_file is not None:
     data = load_data(uploaded_file)
     st.subheader("Dataset Preview")
-    st.write(data.head())
+    st.write(data.head(15))
 
     # Step 2: Data Cleaning
     st.subheader("Data Cleaning")
@@ -43,7 +43,7 @@ if uploaded_file is not None:
     for col in ['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']:
         data[col].fillna(data[col].mean(), inplace=True)
 
-    st.write(data.head())
+    st.write(data.head(15))
 
     st.write("Missing values (after cleaning):")
     st.write(data.isnull().sum())
