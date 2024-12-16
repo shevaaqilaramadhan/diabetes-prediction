@@ -98,10 +98,10 @@ if uploaded_file is not None:
     st.write(f"F1 Score: {f1:.2f}")
 
     # Confusion Matrix
-    st.subheader("Confusion Matrix")
-    disp = ConfusionMatrixDisplay(confusion_matrix=confusion_matrix(y_test, y_pred), display_labels=model.classes_)
-    disp.plot(cmap="Blues", values_format="d")
-    st.pyplot(disp.figure_)
+    # st.subheader("Confusion Matrix")
+    # disp = ConfusionMatrixDisplay(confusion_matrix=confusion_matrix(y_test, y_pred), display_labels=model.classes_)
+    # disp.plot(cmap="Blues", values_format="d")
+    # st.pyplot(disp.figure_)
 
     # Step 8: Predict with User Input
     st.subheader("Predict Diabetes Based on Input")
