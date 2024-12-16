@@ -48,11 +48,11 @@ if uploaded_file is not None:
     st.write(data.isnull().sum())
 
     # Step 3: Visualize Correlation Matrix
-    st.subheader("Correlation Matrix")
-    plt.figure(figsize=(10, 8))
-    corr = data.corr()
-    sns.heatmap(corr, annot=True, cbar=False, cmap="icefire")
-    st.pyplot(plt)
+    # st.subheader("Correlation Matrix")
+    # plt.figure(figsize=(10, 8))
+    # corr = data.corr()
+    # sns.heatmap(corr, annot=True, cbar=False, cmap="icefire")
+    # st.pyplot(plt)
 
     # Step 4: Data Balancing
     st.subheader("Data Balancing")
