@@ -43,9 +43,8 @@ if uploaded_file is not None:
     for col in ['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']:
         data[col].fillna(data[col].mean(), inplace=True)
 
-    st.write(data.head(15))
-
     st.write("Missing values (after cleaning):")
+    st.write(data.head(15))
     st.write(data.isnull().sum())
 
     # Step 3: Visualize Correlation Matrix
